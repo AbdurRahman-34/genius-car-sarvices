@@ -20,7 +20,7 @@ const exparts = [
 const Exparts = () => {
     return (
         <div className='container'>
-            <h2 className='services-titel mt-5'>Our Experts Team <br /> -------------- + --------------</h2>
+            <h2 className='services-titel mt-5'>Our Experts Teams <br /> -------------- + --------------</h2>
             <div className="row">
                 {
                     exparts.map(expart => <Expart
