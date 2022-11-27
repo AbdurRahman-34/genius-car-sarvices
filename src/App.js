@@ -8,6 +8,8 @@ import DetailService from "./Pages/DetailService/DetailService";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import Login from "./Pages/Form/Login/Login";
 import Register from "./Pages/Form/Register/Register";
+import Checkout from "./Pages/Checkout/Checkout/Checkout";
+import RequerAuth from "./Pages/Form/RequerAuth/RequerAuth";
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
+        <Route path="/checkout" element={
+          <RequerAuth>
+            <Checkout/>
+          </RequerAuth>
+        }></Route>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <Footer></Footer>
