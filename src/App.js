@@ -16,8 +16,16 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/" element={
+          <RequerAuth>
+            <Home/>
+          </RequerAuth>
+        }></Route>
+        <Route path="/home" element={
+           <RequerAuth>
+           <Home/>
+         </RequerAuth>
+        }></Route>
         <Route path="/service/:id" element={<DetailService/>}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login/>}></Route>
